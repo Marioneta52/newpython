@@ -3,8 +3,6 @@ lista = list(range(10,1001))
 print(lista)
 for numero in range(5):
         print(numero)
-
-
 #
 monedas = 5
 while monedas > 0:

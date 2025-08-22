@@ -1,4 +1,8 @@
 #look for
+lista = [1,2,3,4,5,6,7,8,9]
+for numero in lista:
+    print(numero)
+
 nombres = ["Juan", "Pedro", "Jose",'Jhon']
 for estudiante in nombres:
     if estudiante.startswith("J"): #startswith compara la primera letra
@@ -14,3 +18,5 @@ for numero in numeros:
 palabra = 'python'
 for letra   in palabra:
     print(letra)
+
+

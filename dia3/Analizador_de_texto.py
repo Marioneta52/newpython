@@ -17,7 +17,7 @@ print(f"Hemos encontrado la letra '{letras[0]}' repetida {cantidad_letras1} vece
 print(f"Hemos encontrado la letra '{letras[1]}' repetida {cantidad_letras2} veces")
 print(f"Hemos encontrado la letra '{letras[2]}' repetida {cantidad_letras3} veces")
 
-print("\n")
+print("\n")https://docs.python.org/es/3.13/library/typing.html#typing.MutableSequence.reverse
 print("CANTIDAD DE PALABRAS")
 palabras = texto.split()
 print(f"Hemos encontrado {len(palabras)} palabras en tu texto")

@@ -1,4 +1,6 @@
 #alojar archivo
+print(open('file01.txt').readline())
+
 mi_archivo =open('file01.txt')
 #print(mi_archivo.read())
 

@@ -5,9 +5,6 @@ class Libro():
         self.cantidad_paginas = cantidad_paginas
 
     def __str__(self):
-        return '"{titulo}", de {autor}'
-
-
- mi_libro = Libro('Mil Horas','Romeo Santos', 2601)
+        return f'"{self.titulo}", de {self.autor}'
 
 

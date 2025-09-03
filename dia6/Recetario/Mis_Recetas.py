@@ -31,6 +31,12 @@ def ver_receta(carpeta, receta):
     ruta_receta = open(archivo_receta)
     print(ruta_receta.read())
 
+def modiciar_receta(carpeta, receta):
+    ruta_receta = Path(ruta).joinpath(carpeta)
+    archivo_receta = ruta_receta / receta[1]
+    ruta_receta = open(archivo_receta,'a')
+    ruta_receta.write('modificacion 1' + '\n')
+
 
 def menu_principal(opcion):
     os.system('cls')
@@ -42,6 +48,7 @@ def menu_principal(opcion):
         case n if opcion == 2:
             c, p = directorioRecetas()
             nomreceta = lista_recetas(c)
+            modiciar_receta(c, nomreceta )
         case n if opcion == 3:
             c, p = directorioRecetas()
             nomreceta = lista_recetas(c)

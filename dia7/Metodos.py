@@ -13,4 +13,5 @@ class Pajaro:
 
 piolin = Pajaro('amarillo','canario')
 piolin.volar(50)
+piolin.piar()
 

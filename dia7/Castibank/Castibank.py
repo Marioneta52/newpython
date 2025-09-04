@@ -5,12 +5,13 @@ class Persona:
         self.apellido = apellido
 
 class Cliente(Persona):
-    def __init__(self, cuenta, saldo):
+    def __init__(self, nombre, apellido, cuenta, saldo):
+        super().__init__(nombre, apellido)
         self.cuenta = cuenta
         self.saldo = saldo
 
     def __str__(self):
-        return f'Cliente:  tiene un saldo de saldo: {self.saldo}'
+        return f'Cliente: {self.nombre} {self.apellido} \nBalance de Cuenta  {self.cuenta}\nSaldo Disponible ${(self.saldo)}'
 
 class Consignar(Cliente):
     def deposito(self,cuenta, saldo, saldo_actual ):
@@ -23,6 +24,7 @@ class Consignar(Cliente):
         self.cuenta = cuenta
         self.saldo = saldo
         self.saldoactual = saldo_actual
+
         return self.saldoactual - self.saldo
 
 
@@ -41,11 +43,12 @@ def inicio():
         print(f"Su cuenta {cuenta} tiene un Saldo actual: ${saldo:,.2f}")
         print("1. Consignar")
         print("2. Retirar")
-        print("3. Salir")
+        print("3. Balance")
+        print("4. Salir")
         print("=" * 30)
 
         try:
-            opcion = int(input("Seleccione una opción (1-3): "))
+            opcion = int(input("Seleccione una opción (1-4): "))
 
             os.system('cls')
         except ValueError:
@@ -61,7 +64,7 @@ def inicio():
                         print("Error: El monto debe ser mayor a cero")
                     else:
                         # saldo += monto
-                        consignacion = Consignar(cuenta, monto)
+                        consignacion = Consignar(nomcli,apecli,cuenta, monto)
                         saldo = consignacion.deposito(cuenta, monto, saldo)
                         print(f"✅ Consignación exitosa. Nuevo saldo: ${saldo:,.2f}")
                 except ValueError:
@@ -76,13 +79,15 @@ def inicio():
                         print("❌ Fondos insuficientes")
                     else:
                         # saldo -= monto
-                        Retiro = Consignar(cuenta, monto)
+                        Retiro = Consignar(nomcli,apecli,cuenta, monto)
                         saldo = Retiro.sacar(cuenta, monto, saldo)
                         print(f"✅ Retiro exitoso. Nuevo saldo: ${saldo:,.2f}")
                 except ValueError:
                     print("Error: Ingrese un monto válido")
-
             case 3:
+                balance = Cliente(nomcli,apecli,cuenta,monto)
+                print(balance)
+            case 4:
                 print("¡Gracias por usar CastiBank sistema bancario!")
                 print(f"Saldo final: ${saldo:,.2f}")
                 break

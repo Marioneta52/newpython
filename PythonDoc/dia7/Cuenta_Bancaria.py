@@ -6,6 +6,7 @@ class Persona:
 
 
 class Cliente(Persona):
+
     def __init__(self, nombre, apellido, numero_cuenta, balance = 0):
         super().__init__(nombre, apellido)
         self.numero_cuenta = numero_cuenta

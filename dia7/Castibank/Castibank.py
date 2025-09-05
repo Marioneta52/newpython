@@ -49,7 +49,6 @@ def inicio():
 
         try:
             opcion = int(input("Seleccione una opción (1-4): "))
-
             os.system('cls')
         except ValueError:
             print("Error: Por favor ingrese un número válido")
@@ -93,6 +92,6 @@ def inicio():
                 break
 
             case _:
-                print("Opción no válida. Por favor seleccione 1, 2 o 3")
+                print("Opción no válida. Por favor seleccione 1, 2 , 3 o 4")
 
 inicio()

@@ -1,5 +1,5 @@
 import unittest
-import cambia_texto
+from dia8.unittest import cambia_texto
 
 
 class ProbarCambiaTexto(unittest.TestCase):

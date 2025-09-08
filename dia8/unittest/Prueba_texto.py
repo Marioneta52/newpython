@@ -5,9 +5,9 @@ import cambia_texto
 class ProbarCambiaTexto(unittest.TestCase):
 
     def test_mayuscula(self):
-        palabra = 'hola'
+        palabra = 'hola mundo'
         resultado = cambia_texto.todo_mayusculas(palabra)
-        self.assertEqual(resultado, 'HOLA')
+        self.assertEqual(resultado, 'HOLA MUNDO')
 
 if __name__ == '__main__':
     unittest.main()

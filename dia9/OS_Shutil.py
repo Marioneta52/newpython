@@ -1,5 +1,6 @@
 import os
 import shutil
+import send2trash
 
 
 #Saber en que directorio me encuentro

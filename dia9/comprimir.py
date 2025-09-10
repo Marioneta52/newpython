@@ -15,7 +15,7 @@ def descomprimir():
 
 #Tambien se puede comprimir utilizando shutil
 def shutil_zip():
-    carpeta_origen = '/home/elitebook/Documentos/mi_archivo'
+    carpeta_origen = 'C:\\Users\\003672661\\OneDrive - IBM\\Documents\\WATSONX\\Level3'
     archivo_destino = 'todo_comprimido2'
     shutil.make_archive(archivo_destino,'zip', carpeta_origen)
 

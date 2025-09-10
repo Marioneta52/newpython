@@ -1,8 +1,5 @@
 import os
 import shutil
-
-
-
 #Saber en que directorio me encuentro
 print(os.getcwd())
 

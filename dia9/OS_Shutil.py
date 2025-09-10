@@ -27,6 +27,7 @@ for carpeta, subcarpeta, archivo in os.walk(ruta):
         print(f'\t{sub}')
     print('Los archivos son:')
     for arch in archivo:
+
         if arch.startswith('Practica'):
             print(f'\t{arch}')
     print('/n')

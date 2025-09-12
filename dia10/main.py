@@ -1,5 +1,6 @@
 import pygame
 
+
 #inicializa pygame
 pygame.init()
 #Crea Pantalla
@@ -15,6 +16,7 @@ while se_ejecuta:
      for event in pygame.event.get():
          if event.type == pygame.QUIT:
              se_ejecuta = False
+
 
 
 
